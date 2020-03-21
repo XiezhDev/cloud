@@ -1,0 +1,448 @@
+html, body {
+    font-family: "微软雅黑", "PingFang SC", "arial, helvetica, sans-serif";
+    margin: 0;
+}
+
+* {
+    /*-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;*/
+    /* box-sizing: border-box; */
+}
+
+::-webkit-input-placeholder {
+    color: #f5f5f5;
+}
+
+/* 隐藏滚动条 */
+::-webkit-scrollbar {
+    display:none
+}
+
+:-moz-placeholder {
+    color: #f5f5f5;
+}
+
+::-moz-placeholder {
+    color: #f5f5f5;
+}
+
+:-ms-input-placeholder {
+    color: #f5f5f5;
+}
+
+[v-cloak] {
+    display: none;
+}
+
+.main-container {
+    width: 100%;
+}
+
+.header-container {
+    position: fixed;
+    background-color: #398dee;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    margin: 0 auto;
+    z-index: 10;
+}
+
+.header-left {
+
+}
+
+.header-left .tab {
+    float: left;
+}
+
+.header-left .tab a {
+    text-decoration: none;
+}
+
+.header-left .brand {
+    float: left;
+    width: 240px;
+}
+
+.tab-active {
+    background-color: rgba(0, 0, 0, 0.15)!important;
+}
+
+.tab-inactive {
+    color: rgba(255, 255, 255, 0.6)!important;
+}
+
+.header-left .homepage, .header-left .knowledgebase, .header-left .share{
+    font-size: 14px;
+    color: #fff;
+    line-height: 50px;
+    width: 90px;
+    display: inline-block;
+    text-align: center;
+}
+
+.header-container .logo {
+    height: 30px;
+    width: 30px;
+    margin: 10px 10px 10px 20px;
+    border: 1px #fff;
+}
+
+.header-container .description {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 60px;
+    font-size: 22px;
+    color: #fff;
+}
+
+.header-container .logout {
+    float: right;
+    height: 50px;
+    padding: 10px 40px 10px 0px;
+
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.header-container .user-info {
+    float: right;
+    color: #ffffff;
+    font-size: 15px;
+    margin: 15px;
+}
+
+.body-container {
+    background: #fff;
+
+    height: 100%;
+    overflow: hidden;
+    padding-top: 50px;
+    margin: 0 auto;
+}
+
+.left-container {
+    position: fixed;
+    height: 100%;
+    top: 50px;
+    width: 240px;
+    background-color: #545c64;
+}
+
+.left-top {
+    height: 60px;
+    width: 240px;
+    border-bottom: 1px solid #fff;
+    text-align: center;
+}
+
+.left-top .el-dropdown {
+    height: 30px;
+}
+
+.notebook-name {
+    width: 153px;
+    display: inline-block;
+}
+
+.notebook-menu .el-tag{
+    background-color: unset;
+    padding: unset;
+    height: unset;
+    line-height: unset;
+    font-size: unset;
+    color: unset;
+    border-radius: unset;
+    box-sizing: unset;
+    border: unset;
+    display: unset;
+}
+
+.notebook-menu .el-tag .el-icon-close::before {
+    /*display: unset;*/
+}
+/* 知识库删除按钮 */
+.notebook-menu .el-tag .el-icon-close {
+    float: right;
+    margin-top: 17px;
+}
+
+.create-btn {
+    line-height: 60px!important;
+    color: #fff!important;
+}
+
+.middle-container {
+    position: fixed;
+    /*height: 100%;*//* 高度动态计算 */
+    top: 50px;
+    width: 480px;
+    margin-left: 240px;
+    /*border-right: 1px solid #545c64;*/
+
+}
+
+.middle-top {
+    height: 60px;
+    width: 480px;
+    border-bottom: 1px solid #545c64;
+    text-align: center;
+}
+
+.middle-content {
+    height: 100%;
+    overflow: scroll;
+}
+
+.search-input {
+    width: 300px!important;
+    padding: 10px;
+}
+
+.search-input .el-input__icon {
+    margin-left: 10px;
+}
+
+.stepInfo .el-tag{
+    background-color: unset;
+    padding: unset;
+    height: unset;
+    line-height: unset;
+    font-size: unset;
+    color: unset;
+    border-radius: unset;
+    box-sizing: unset;
+    border: unset;
+    display: unset;
+}
+
+.right-container {
+    margin-left: 720px;
+    height: 100%;
+    overflow: hidden;
+    border-left: 1px solid #545c64;
+}
+
+.right-top {
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid #545c64;
+    margin-bottom: 10px;
+}
+
+.editor-container {
+    margin: 0px 10px 19px 10px;
+    height: 100%;
+    overflow: scroll;
+}
+
+.title-input .el-input__inner{
+border: none;
+font-size: 18px;
+color: #393939;
+}
+
+.foot-container {
+width: 90%;
+margin: 0 auto;
+}
+
+.bg-gray {
+background-color: #e7e8eb;
+}
+
+/* 中部笔记样式 */
+.knowledge-ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.knowledge-item {
+    height: 60px;
+    border-bottom: 1px solid #cacaca;
+    margin: 10px;
+}
+
+.knowledge-item:hover {
+    background: #e7e8eb;
+    cursor: pointer;
+}
+
+.title {
+    float: left;
+    font-size: 16px;
+    font-weight: 600;
+
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.datatime {
+    float: right;
+    font-size: 14px;
+    color: #c2c2c2;
+}
+
+.brief-content {
+    margin-top: 10px;
+    float: left;
+    font-size: 14px;
+    color: #82828c;
+
+    max-width: 400px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* 替换的演示*/
+.el-row {
+    text-align: right;
+    padding: 10px;
+}
+
+.el-menu {
+    border-right: unset!important;
+}
+
+.el-tag {
+    margin: 10px;
+}
+
+.button-new-tag {
+    margin: 10px!important;
+    height: 32px;
+    line-height: 30px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.input-new-tag {
+    width: 90px!important;
+    margin: 10px!important;
+    vertical-align: bottom;
+}
+
+
+/* 知识分享 */
+.el-header {
+    color: #333;
+    border-bottom: 1px solid #ebeef5;
+}
+
+.el-aside {
+    color: #333;
+    padding: 10px;
+}
+
+.el-select .el-input {
+    width: 130px;
+}
+
+.el-main {
+    color: #333;
+    border-left: 1px solid #ebeef5;
+    border-right: 1px solid #ebeef5;
+}
+
+/* 知识分享外层card */
+.box-card {
+    width: 1480px;
+    margin: 20px auto;
+}
+/* 排行榜card */
+.clickcount, .favoritecount {
+    width: 280px;
+    margin-bottom: 10px;
+
+}
+
+.box-card a {
+    text-decoration: none;
+}
+
+.countrank {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.el-card__header {
+    background: #e7e8eb!important;
+}
+
+/* 共享知识检索列表 */
+.el-table th{
+    background: #e7e8eb!important;
+}
+
+/* 分页 */
+.el-pagination {
+    float: bottom;
+}
+
+
+/* 阅读页面 */
+.read-header {
+    margin-left: 200px;
+    float: left;
+}
+
+.read-header h1 {
+    margin: 0;
+}
+
+/* 评论 */
+/*评论样式*/
+.comment-list-title {
+    float: left;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.comment-count {
+    float: right;
+}
+
+.comment-list {
+
+}
+
+.comment-list .sentor {
+    float: left;
+    font-size: 16px;
+    font-weight: 600;
+
+    max-width: 300px;
+}
+
+.comment-list .senttime {
+    float: right;
+    font-size: 14px;
+    color: #c2c2c2;
+}
+
+.comment-list .content {
+    margin-top: 10px;
+    float: left;
+    font-size: 14px;
+    color: #333;
+    width: 100%;
+    padding: 5px;
+    border-bottom: 1px solid #cacaca;
+}
+
+.comment-ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.comment-ul li {
+    height: 60px;
+    margin: 10px;
+}

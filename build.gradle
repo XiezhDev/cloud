@@ -1,0 +1,45 @@
+plugins{
+    id'org.springframework.boot' version'2.1.6.RELEASE'
+    id'java'
+    id'war'
+}
+
+apply plugin:'io.spring.dependency-management'
+
+group='com.huige'
+version='0.0.1-SNAPSHOT'
+sourceCompatibility='1.8'
+
+repositories{
+    mavenCentral()
+}
+
+
+dependencies{
+    /* 本地包 */
+    compile fileTree(dir:'libs',include:'*.jar')
+    /* Spring Boot*/
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: '2.1.6.RELEASE'
+    /* Srping Web*/
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.1.6.RELEASE'
+    /* Spring AOP*/
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-aop', version: '2.1.6.RELEASE'
+    /* Spring Security*/
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '2.1.6.RELEASE'
+    /* thymeleaf */
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version: '2.1.6.RELEASE'
+    /* Tomcat */
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-tomcat', version: '2.1.6.RELEASE'
+    /* Spring Test*/
+    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.1.6.RELEASE'
+
+    /*TokenUtil Device*/
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-mobile', version: '1.5.21.RELEASE'
+    compile group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'
+    /* Servlet API*/
+    providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
+    /* 持久层 */
+    runtime group: 'mysql', name: 'mysql-connector-java', version: '5.1.47'
+    /*runtime group: 'com.oracle', name: 'ojdbc14', version: '10.2.0.4.0'*/
+    compile group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '2.0.1'
+}

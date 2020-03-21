@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.huige.cloud.dao.UserDao">
+
+	<sql id="dynamicWhere">
+		<where>
+			<if test="_parameter.containsKey('ids') and ids != null">
+				and id in (${ids})
+			</if>
+		</where>
+	</sql>
+
+	<select id="select" resultType="com.huige.cloud.model.User">
+		select * from user where id=#{id}
+	</select>
+
+	<select id="count" resultType="int">
+		select count(*) from user
+		<include refid="dynamicWhere" />
+	</select>
+
+	<select id="list" resultType="com.huige.cloud.model.User">
+		select * from user
+		<include refid="dynamicWhere" />
+		<if test="_parameter.containsKey('order') and order!=null">
+			order by ${order}
+		</if>
+		limit #{start},#{size}
+	</select>
+
+	<insert id="insert" parameterType="com.huige.cloud.model.User"  useGeneratedKeys="true" keyProperty="id">
+		insert into user (username,password,truename,email,phone,state,code)
+		values (#{username},#{password},#{truename},#{email},#{phone},#{state},#{code})
+	</insert>
+
+	<update id="update" parameterType="com.huige.cloud.model.User">
+		update user
+		<set>
+			<if test="username != null">
+				username=#{username},
+			</if>
+			<if test="password != null">
+				password=#{password},
+			</if>
+			<if test="truename != null">
+				truename=#{truename},
+			</if>
+			<if test="email != null">
+				email=#{email},
+			</if>
+			<if test="phone != null">
+				phone=#{phone},
+			</if>
+			<if test="state != 0">
+				state=#{state},
+			</if>
+			<if test="code != null">
+				code=#{code},
+			</if>
+		</set>
+		where id=#{id}
+	</update>
+
+	<update id="delete">
+		delete from user where id=#{id}
+	</update>
+
+	<!--<select id="login" resultType="com.huige.cloud.model.User">
+		select * from admin
+		where username = #{username}
+		and password = #{password}
+		and state = 1
+	</select>
+-->
+	<select id="selectByUserName" resultType="com.huige.cloud.model.User">
+		select * from user
+		where username = #{username}
+		and state = 1
+	</select>
+
+</mapper>

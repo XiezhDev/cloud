@@ -1,0 +1,54 @@
+.time_line {
+    width: 70%;
+    margin-left: 20px;
+    position: relative;
+    height: 100%;
+    border-left: 1.5px solid #f3eda4;
+    padding-left: 50px;
+}
+
+.time_line > div {
+    padding: 10px 0;
+    box-sizing: border-box;
+    margin: 10px 0;
+    position: relative;
+    cursor: pointer;
+    width: 400px;
+}
+
+.time_line .circle {
+    width: 18px;
+    height: 18px;
+    border-radius: 18px;
+    border: 2px solid #f3eda4;
+    position: absolute;
+    background-color: #fff;
+    left: -62px;
+    /*top: 18px;*/
+    z-index: 999;
+}
+
+.time_line .active {
+    border: 2px solid #ff6400;
+    background-color: #ff6400;
+    box-shadow: 0px 0px 0px 3px #fff inset;
+}
+
+.time_line .stepInfo {
+    width: 100px;
+    color: #333;
+    /*line-height: 40px;*/
+}
+
+.time_line .btnGroup input[type='button'] {
+    background: none;
+    outline: none;
+    border: none;
+    color: #fff;
+    background-color: #1E90FF;
+    padding: 0 6px;
+    border-radius: 5px;
+
+    height: 40px;
+    line-height: 40px;
+}
