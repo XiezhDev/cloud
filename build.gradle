@@ -42,4 +42,8 @@ dependencies{
     runtime group: 'mysql', name: 'mysql-connector-java', version: '5.1.47'
     /*runtime group: 'com.oracle', name: 'ojdbc14', version: '10.2.0.4.0'*/
     compile group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '2.0.1'
+
+    /* ActiveMq*/
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-activemq', version: '2.1.6.RELEASE'
+
 }
