@@ -1,4 +1,4 @@
-package com.huige.cloud.activemq.queue.config;
+package com.huige.cloud.test.activemq.queue.config;
 
 import org.apache.activemq.command.ActiveMQQueue;
 import org.springframework.beans.factory.annotation.Value;

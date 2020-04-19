@@ -1,12 +1,14 @@
 package com.huige.cloud.model;
 
 
+import java.io.Serializable;
+
 /**
  *@Author xiezh
  *@Description 用户
  *@Date 2018/5/15 12:30
  */
-public class User {
+public class User implements Serializable {
 
 	private int id;
 

@@ -1,4 +1,4 @@
-package com.huige.cloud.activemq.queue.consumer;
+package com.huige.cloud.test.activemq.queue.consumer;
 
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Component;

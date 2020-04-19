@@ -1,6 +1,6 @@
 package com.huige.cloud;
 
-import com.huige.cloud.activemq.queue.producer.QueueProducer;
+import com.huige.cloud.test.activemq.queue.producer.QueueProducer;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

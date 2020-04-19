@@ -1,4 +1,4 @@
-package com.huige.cloud.activemq.topic.config;
+package com.huige.cloud.test.activemq.topic.config;
 
 import org.apache.activemq.command.ActiveMQTopic;
 import org.springframework.beans.factory.annotation.Value;

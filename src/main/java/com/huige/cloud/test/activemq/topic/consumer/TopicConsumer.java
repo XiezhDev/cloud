@@ -1,4 +1,4 @@
-package com.huige.cloud.activemq.topic.consumer;
+package com.huige.cloud.test.activemq.topic.consumer;
 
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Component;

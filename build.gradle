@@ -46,4 +46,7 @@ dependencies{
     /* ActiveMq*/
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-activemq', version: '2.1.6.RELEASE'
 
+    /* redis */
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-redis', version: '2.1.6.RELEASE'
+
 }

@@ -1,4 +1,4 @@
-package com.huige.cloud.activemq.topic.producer;
+package com.huige.cloud.test.activemq.topic.producer;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.core.JmsMessagingTemplate;
